@@ -1,0 +1,36 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/student" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{student._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{student.fullName}}">
+        <div class="text-danger">
+            {{student.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>UserId</label>
+        <input type="text" class="form-control" name="userId" placeholder="userId" value="{{student.userId}}">
+        <div class="text-danger">
+            {{student.userIdError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Password</label>
+            <input type="text" class="form-control" name="password" placeholder="password" value="{{student.password}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Year</label>
+            <input type="text" class="form-control" name="Year" placeholder="Year" value="{{student.Year}}">
+        </div>
+    </div>
+    <div class="form-group">
+      <!--<a href="http://google.com" class="fa fa-database">
+        <button type="submit" >Submit</button>
+        </a>
+      <a href="http://172.21.0.10/moodle/" class="fa fa-list-alt">Signin</a>-->
+        <button type="submit" <a class="btn btn-info" href="/student/lists"</a> ><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/student/signinpage"><i class="fa fa-list-alt"></i> Signin</a>
+
+    </div>
+</form>
